@@ -1,0 +1,27 @@
+{
+  "name": "Api_nodejs",
+  "version": "1.0.0",
+  "description": "api node",
+  "main": "index.js",
+  "author": "evaristo",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/express": "^4.17.15",
+    "@types/node": "^20.0.0",
+    "eslint": "^9.21.0",
+    "globals": "^16.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.26.0"
+  },
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "npx ts-node src/index.ts",
+    "build": "tsc"
+  }
+}
