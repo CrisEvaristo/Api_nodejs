@@ -1,18 +1,16 @@
 import { Router, Request, Response } from "express";
 
+import {CidadeController} from './../controllers';
+
+
 const router=Router();
 
-router.get('/teste', (req: Request, res: Response) => {
-  return res.send('ola dev');
-});
 
 router.get('/', (req: Request, res: Response) => {
-  return res.send('ola principal');
+  return res.send('Bem-vindo');
 });
 
 
-router.post('/teste',(req:Request,res:Response)=>{
-  console.log(req.body);
-  return res.send('testando psot');
-});
+router.post('/cidades',CidadeController.create);
+
 export default router;
