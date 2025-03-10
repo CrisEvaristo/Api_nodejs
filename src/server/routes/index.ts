@@ -11,6 +11,6 @@ router.get('/', (req: Request, res: Response) => {
 });
 
 
-router.post('/cidades',CidadeController.create);
+router.post('/cidades',CidadeController.createValidation,CidadeController.create);
 
 export default router;
