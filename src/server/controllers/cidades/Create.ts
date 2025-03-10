@@ -1,12 +1,26 @@
-import { Request, Response } from "express";
+import { Request, RequestHandler, Response } from "express";
+import {validation} from '../../shared/middlewares/validation';
 
+import * as yup from 'yup';
 
-interface ICidade{
-  nome:string;
+interface ICidade {
+  nome: string;
+  estado: string;
+
 }
-export const create=(req:Request<{},{},ICidade>,res:Response)=>{
+const bodyValidation: yup.ObjectSchema<ICidade> = yup.object().shape({
+  nome: yup.string().required().min(3),
+  estado: yup.string().required().min(3)
+}); 
 
-  console.log(req.body.nome);
 
-return res.send('create');
+//Criando o middleware
+
+export const createValidation=validation('body',bodyValidation);
+
+
+export const create = async (req: Request<{}, {}, ICidade>, res: Response) => {
+  console.log(req.body);
+  return res.send('create');
 };
+
