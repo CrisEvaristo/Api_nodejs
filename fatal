@@ -1,0 +1,8 @@
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+I    1000       1    1000       4484  cons3    1055237 14:24:02 /usr/bin/less
+      912       1     912      18832  cons2    1055237 14:15:36 /usr/bin/bash
+I     911       1     910      22980  cons0    1055237 14:12:20 /usr/bin/less
+      787       1     787      19032  cons1    1055237 13:58:17 /usr/bin/bash
+      725       1     725      17192  cons0    1055237 08:42:05 /usr/bin/bash
+      910     725     910      14256  cons0    1055237 14:12:20 /mingw64/bin/git
+     1231     912    1231       8752  cons2    1055237 14:30:52 /usr/bin/PS
